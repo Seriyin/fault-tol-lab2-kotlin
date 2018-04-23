@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <bytecodeTargetLevel>
+      <module name="lab2-cli_main" target="1.10" />
+      <module name="lab2-cli_test" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-cli_main" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-cli_test" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-mes_main" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-mes_test" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-srv_main" target="1.10" />
+      <module name="Lab2-Kotlin-lab2-srv_test" target="1.10" />
+      <module name="Lab2-Kotlin_main" target="1.8" />
+      <module name="Lab2-Kotlin_test" target="1.8" />
+      <module name="lab2-mes_main" target="1.10" />
+      <module name="lab2-mes_test" target="1.10" />
+      <module name="lab2-srv_main" target="1.10" />
+      <module name="lab2-srv_test" target="1.10" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli.iml" filepath="$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli.iml" group="lab2-cli" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli_main.iml" group="lab2-cli" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-472075960/Lab2-Kotlin-lab2-cli_test.iml" group="lab2-cli" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes.iml" filepath="$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes.iml" group="lab2-mes" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes_main.iml" group="lab2-mes" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-472066557/Lab2-Kotlin-lab2-mes_test.iml" group="lab2-mes" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv.iml" filepath="$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv.iml" group="lab2-srv" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv_main.iml" filepath="$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv_main.iml" group="lab2-srv" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv_test.iml" filepath="$PROJECT_DIR$/.idea/modules/-472060385/Lab2-Kotlin-lab2-srv_test.iml" group="lab2-srv" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/-1355790753/Tolerancia a Faltas-Lab2-Kotlin.iml" filepath="$PROJECT_DIR$/.idea/modules/-1355790753/Tolerancia a Faltas-Lab2-Kotlin.iml" />
+    </modules>
+  </component>
+</project>
