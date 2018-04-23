@@ -3,29 +3,34 @@ package pt.um.tf.lab2.lab2cli
 import io.atomix.catalyst.concurrent.SingleThreadContext
 import io.atomix.catalyst.concurrent.ThreadContext
 import io.atomix.catalyst.serializer.Serializer
-import io.atomix.catalyst.transport.Address
-import io.atomix.catalyst.transport.Transport
-import io.atomix.catalyst.transport.netty.NettyTransport
+import pt.haslab.ekit.Spread
+import pt.um.tf.lab2.lab2mes.Bank
 import pt.um.tf.lab2.lab2mes.Message
 import pt.um.tf.lab2.lab2mes.Reply
-import pt.um.tf.lab2.lab2mes.Bank
+import java.util.*
+import java.util.concurrent.ThreadLocalRandom
 
 class BankFactory {
-    private val me = Address("127.0.0.1", 22556)
-    private val t : Transport = NettyTransport()
-    private val l = arrayListOf<ThreadContext>()
+    private val tlr = ThreadLocalRandom.current()
+    private val l = arrayListOf<Pair<ThreadContext,Spread>>()
 
     fun newBank() : Bank {
         val sr = Serializer()
+        val me = UUID(tlr.nextLong(), tlr.nextLong())
+        val sp = Spread("cli-$me",false)
         sr.register(Message::class.java)
         sr.register(Reply::class.java)
         val tc : ThreadContext = SingleThreadContext("cli-%d", sr)
-        l.add(tc)
-        return BankStub(me, t, sr, tc)
+        l.add(Pair(tc,sp))
+        return BankStub(me, sp, sr, tc)
     }
 
     fun closeBanks() {
-        l.forEach{ it.close()}
-        t.close()
+        l.forEach{ (a, b) ->
+            a.close()
+            b.close()
+        }
+        l.clear()
     }
+
 }
