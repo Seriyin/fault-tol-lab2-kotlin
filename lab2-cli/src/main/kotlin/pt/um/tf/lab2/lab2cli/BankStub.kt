@@ -2,48 +2,66 @@ package pt.um.tf.lab2.lab2cli
 
 import io.atomix.catalyst.concurrent.ThreadContext
 import io.atomix.catalyst.serializer.Serializer
-import io.atomix.catalyst.transport.Address
-import io.atomix.catalyst.transport.Connection
-import io.atomix.catalyst.transport.Transport
+import pt.haslab.ekit.Spread
+import pt.um.tf.lab2.lab2mes.Bank
 import pt.um.tf.lab2.lab2mes.Message
 import pt.um.tf.lab2.lab2mes.Reply
-import pt.um.tf.lab2.lab2mes.Bank
+import spread.SpreadMessage
+import java.util.*
 import java.util.concurrent.CompletableFuture
+import java.util.logging.Level
+import java.util.logging.Logger
 
-class BankStub(val me: Address, val t: Transport, val sr: Serializer, val tc: ThreadContext) : Bank {
+class BankStub(val me: UUID,
+               val sp: Spread,
+               val sr: Serializer,
+               val tc: ThreadContext) : Bank
+{
+    companion object {
+        val LOGGER : Logger = Logger.getLogger("BankStub")
+    }
 
-    private var conF : CompletableFuture<Connection> = CompletableFuture()
+    private var comFMov : CompletableFuture<Boolean> = CompletableFuture()
+    private var comFBal : CompletableFuture<Long> = CompletableFuture()
+    private var i : Int = 0
 
     init {
+        sp.open()
+        sp.handler(Reply::class.java, {
+            sm: SpreadMessage,
+            m: Reply -> handle(m)
+        })
+    }
+
+    override fun movement(mov: Long): Boolean {
+        comFMov = CompletableFuture()
         tc.execute {
-            conF = t.client().connect(me)
+            sp.multicast(SpreadMessage(), Message(i,1, mov, me))
         }
+        return comFMov.get()
+    }
+
+    override fun balance(): Long {
+        comFBal = CompletableFuture()
+        tc.execute {
+            sp.multicast(SpreadMessage(), Message(i,0, 0, me))
+        }
+        return comFBal.get()
     }
 
 
-    override fun movement(mov: Int): Boolean {
-        val res : CompletableFuture<Boolean> = CompletableFuture()
-        tc.execute {
-            conF.thenApply {
-                it.sendAndReceive<Message, Reply>(Message(1, mov)).thenAccept {
-                    res.complete(it.denied)
+    private fun handle(m: Reply) {
+        when (m.op) {
+            1 -> when {
+                m.seq < i -> LOGGER.log(Level.INFO,"Repeat message")
+                m.seq == i -> {
+                    comFMov.complete(m.denied)
+                    i++
                 }
+                else -> LOGGER.log(Level.SEVERE, "Sequence is ahead of messaging")
             }
+            0 -> comFBal.complete(m.balance)
         }
-        return res.get()
-    }
-
-    override fun balance(): Int {
-        val res : CompletableFuture<Int> = CompletableFuture()
-        tc.execute {
-            conF.thenApply {
-                it.sendAndReceive<Message, Reply>(Message()).thenAccept {
-                    res.complete(it.balance)
-                    println("Balance incoming ${it.balance}")
-                }
-            }
-        }
-        return res.get()
     }
 
 }
