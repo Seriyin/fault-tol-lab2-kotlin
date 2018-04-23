@@ -2,15 +2,16 @@ import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
 
 
 buildscript {
-    var kotlin_version: String = "1.2.40"
+    val _kotlin_version = "1.2.40"
 
     repositories {
         mavenCentral()
+        mavenLocal()
         jcenter()
     }
 
     dependencies {
-        classpath(kotlinModule("gradle-plugin", kotlin_version))
+        classpath(kotlinModule("gradle-plugin", _kotlin_version))
     }
 
 }
@@ -25,9 +26,17 @@ subprojects {
         plugin("application")
     }
 
+    ext {
+        set("spread_version", "4.4.0")
+        set("kotlin_version", "1.2.40")
+        set("catalyst_version", "1.2.1")
+        set("ekit_version", "1.2-SNAPSHOT")
+    }
+
     repositories {
         mavenCentral()
-
+        mavenLocal()
+        jcenter()
     }
 
     tasks.withType<KotlinCompile> {

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Gradle: pt.haslab:ekit:1.2-SNAPSHOT">
+    <CLASSES>
+      <root url="file://$PROJECT_DIR$/Could not find pt.haslab:ekit:1.2-SNAPSHOT." />
+      <root url="jar://$MAVEN_REPOSITORY$/pt/haslab/ekit/1.2-SNAPSHOT/ekit-1.2-SNAPSHOT.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
