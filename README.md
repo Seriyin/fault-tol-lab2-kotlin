@@ -9,3 +9,5 @@ Collect all balances of individual clients that make transactions on behalf of t
 Sum and collect a total balance.
 
 Check if summed balance matches account balance.
+
+Use Spread toolkit to ensure atomic multicasts.
