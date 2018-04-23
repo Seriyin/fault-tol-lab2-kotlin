@@ -2,22 +2,22 @@ package pt.um.tf.lab2.lab2cli
 
 import java.util.concurrent.BlockingQueue
 
-class Spammer(val i: Int, val bf: BankFactory, val q: BlockingQueue<Int>) {
+class Spammer(val i: Int, val bf: BankFactory, val q: BlockingQueue<Long>) {
     fun execute() {
         val b = bf.newBank()
         val rand = (20000..80000).random()
-        var balance = 0
-        println("${i} Spammer will do ${rand} iterations")
+        var balance : Long = 0
+        println("$i Spammer will do $rand iterations")
         (0..rand).forEach {
-            val mov = (-200..200).random()
+            val mov = (-200..200).random().toLong()
             if (b.movement(mov)) {
                 balance += mov
             }
             else {
-                println("Rejected ${mov}")
+                println("Rejected $mov")
             }
         }
-        println("${i} Spammer finished with ${balance}")
+        println("$i Spammer finished with $balance")
         q.put(balance)
     }
 }
