@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":lab2-srv:main" external.linked.project.path="$MODULE_DIR$/../../../lab2-srv" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="pt.um.tf.lab2" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":lab2-cli:test" external.linked.project.path="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="pt.um.tf.lab2" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="destination" value="$MODULE_DIR$/../../../lab2-srv/build/classes/kotlin/main" />
+          <option name="destination" value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli/build/classes/kotlin/test" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
-          <option name="moduleName" value="lab2-srv" />
+          <option name="moduleName" value="lab2-cli" />
           <option name="jvmTarget" value="1.10" />
           <option name="addCompilerBuiltIns" value="true" />
           <option name="loadBuiltInsFromDependencies" value="true" />
@@ -25,16 +25,17 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_10">
-    <output url="file://$MODULE_DIR$/../../../lab2-srv/out/production/classes" />
+    <output-test url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../lab2-srv/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../../lab2-srv/src/main/kotlin" isTestSource="false" />
-      <sourceFolder url="file://$MODULE_DIR$/../../../lab2-srv/src/main/resources" type="java-resource" />
+    <content url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli/src/test">
+      <sourceFolder url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli/src/test/kotlin" isTestSource="true" />
+      <sourceFolder url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli/src/test/resources" type="java-test-resource" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Lab2-Kotlin-lab2-cli_main" />
     <orderEntry type="library" name="Gradle: pt.haslab:ekit:1.2-SNAPSHOT" level="project" />
-    <orderEntry type="module" module-name="lab2-mes_main" />
+    <orderEntry type="module" module-name="Lab2-Kotlin-lab2-mes_main" />
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib-jdk8:1.2.40" level="project" />
     <orderEntry type="library" name="Gradle: io.atomix.catalyst:catalyst-netty:1.2.1" level="project" />
     <orderEntry type="library" name="Gradle: io.atomix.catalyst:catalyst-local:1.2.1" level="project" />
@@ -58,4 +59,5 @@
     <orderEntry type="library" name="Gradle: io.netty:netty-resolver:4.1.5.Final" level="project" />
     <orderEntry type="library" name="Gradle: io.netty:netty-common:4.1.5.Final" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="lab2-cli_main" />
 </module>

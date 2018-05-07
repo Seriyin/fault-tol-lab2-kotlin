@@ -7,10 +7,10 @@
         <option name="externalProjectPath" value="$PROJECT_DIR$" />
         <option name="modules">
           <set>
-            <option value="$PROJECT_DIR$" />
-            <option value="$PROJECT_DIR$/lab2-cli" />
-            <option value="$PROJECT_DIR$/lab2-mes" />
-            <option value="$PROJECT_DIR$/lab2-srv" />
+            <option value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin" />
+            <option value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-cli" />
+            <option value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes" />
+            <option value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-srv" />
           </set>
         </option>
         <option name="useAutoImport" value="true" />

@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<module external.linked.project.id=":lab2-mes:main" external.linked.project.path="$MODULE_DIR$/../../../lab2-mes" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="pt.um.tf.lab2" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
+<module external.linked.project.id=":lab2-mes:test" external.linked.project.path="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="pt.um.tf.lab2" external.system.module.type="sourceSet" external.system.module.version="1.0-SNAPSHOT" type="JAVA_MODULE" version="4">
   <component name="FacetManager">
     <facet type="kotlin-language" name="Kotlin">
       <configuration version="3" platform="JVM 1.6" useProjectSettings="false">
         <compilerSettings />
         <compilerArguments>
-          <option name="destination" value="$MODULE_DIR$/../../../lab2-mes/build/classes/kotlin/main" />
+          <option name="destination" value="$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes/build/classes/kotlin/test" />
           <option name="noStdlib" value="true" />
           <option name="noReflect" value="true" />
           <option name="moduleName" value="lab2-mes" />
@@ -25,13 +25,14 @@
     </facet>
   </component>
   <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_10">
-    <output url="file://$MODULE_DIR$/../../../lab2-mes/out/production/classes" />
+    <output-test url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes/out/test/classes" />
     <exclude-output />
-    <content url="file://$MODULE_DIR$/../../../lab2-mes/src/main">
-      <sourceFolder url="file://$MODULE_DIR$/../../../lab2-mes/src/main/kotlin" isTestSource="false" />
+    <content url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes/src/test">
+      <sourceFolder url="file://$USER_HOME$/Documents/Engenharia Informatica/Mestrado/SD/Tolerancia a Faltas/Lab2-Kotlin/lab2-mes/src/test/kotlin" isTestSource="true" />
     </content>
     <orderEntry type="inheritedJdk" />
     <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module" module-name="Lab2-Kotlin-lab2-mes_main" />
     <orderEntry type="library" name="Gradle: io.atomix.catalyst:catalyst-transport:1.2.1" level="project" />
     <orderEntry type="library" name="Gradle: io.atomix.catalyst:catalyst-concurrent:1.2.1" level="project" />
     <orderEntry type="library" name="Gradle: io.atomix.catalyst:catalyst-serializer:1.2.1" level="project" />
@@ -44,4 +45,5 @@
     <orderEntry type="library" name="Gradle: org.jetbrains.kotlin:kotlin-stdlib:1.2.40" level="project" />
     <orderEntry type="library" name="Gradle: org.jetbrains:annotations:13.0" level="project" />
   </component>
+  <component name="TestModuleProperties" production-module="lab2-mes_main" />
 </module>
