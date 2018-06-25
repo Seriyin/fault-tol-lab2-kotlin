@@ -1,13 +1,15 @@
 package pt.um.tf.lab2.lab2cli
 
+import mu.KLogging
 import java.util.concurrent.BlockingQueue
 
 class Spammer(val i: Int, val bf: BankFactory, val q: BlockingQueue<Long>) {
+    companion object : KLogging()
     fun execute() {
         val b = bf.newBank()
         val rand = (20000..80000).random()
         var balance : Long = 0
-        println("$i Spammer will do $rand iterations")
+        logger.info("$i Spammer will do $rand iterations")
         (0..rand).forEach {
             val mov = (-200..200).random().toLong()
             if (b.movement(mov)) {
@@ -17,7 +19,7 @@ class Spammer(val i: Int, val bf: BankFactory, val q: BlockingQueue<Long>) {
                 println("Rejected $mov")
             }
         }
-        println("$i Spammer finished with $balance")
+        logger.info("$i Spammer finished with $balance")
         q.put(balance)
     }
 }
