@@ -16,13 +16,13 @@ class BankFactory {
 
     fun newBank() : Bank {
         val sr = Serializer()
-        val me = UUID(tlr.nextLong(), tlr.nextLong())
+        val me = UUID.randomUUID().toString()
         val sp = Spread("cli-$me",false)
         sr.register(Message::class.java)
         sr.register(Reply::class.java)
         val tc : ThreadContext = SingleThreadContext("cli-%d", sr)
         l.add(Pair(tc,sp))
-        return BankStub(me, sp, sr, tc)
+        return BankStub(me, sp, tc)
     }
 
     fun closeBanks() {
